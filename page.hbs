@@ -1,32 +1,28 @@
 {{!< default}}
 
-{{! This is a page template. A page outputs content just like any other post, and has all the same
-    attributes by default, but you can also customise it to behave differently if you prefer. }}
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
 
-{{! Everything inside the #post tags pulls data from the page }}
+{{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 
-<header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
-    <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
-        <a class="back-button icon-arrow-left" href="{{@blog.url}}">Home</a>
-        <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a>
-    </nav>
-</header>
+    <header class="row">
+        <div class="column">
+            <h1>{{@blog.title}}</h1>
+            <h5>{{@blog.description}}</h5>
+        </div>
+    </header>
+    <main class="body" id="content" role="main">
+        <article class="row {{post_class}}">
+            <div class="column">
+                <h4 class="title">{{{title}}}</h4>
+                <section>
+                    {{content}}
+                </section>
+            </div>
+        </article>
+    </main>
 
-<main class="content" role="main">
-
-    <article class="{{post_class}}">
-    {{! Everything inside the #post tags pulls data from the post }}
-
-        <header class="post-header">
-            <h1 class="post-title">{{title}}</h1>
-        </header>
-
-        <section class="post-content">
-            {{content}}
-        </section>
-
-    </article>
-
-</main>
 {{/post}}
+
+
