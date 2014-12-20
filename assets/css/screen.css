@@ -43,3 +43,7 @@ h4.title {
 footer {
     margin-bottom: 10%;
 }
+
+nav .columns {
+    text-align: center;
+}
