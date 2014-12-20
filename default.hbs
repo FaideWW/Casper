@@ -20,9 +20,9 @@
 
     <!-- CSS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="{{asset css/normalize.css}}">
-    <link rel="stylesheet" href="{{asset css/skeleton.css}}">
-    <link rel="stylesheet" href="{{asset css/screen.css}}}">
+    <link rel="stylesheet" href="{{asset "css/normalize.css"}}">
+    <link rel="stylesheet" href="{{asset "css/skeleton.css"}}">
+    <link rel="stylesheet" href="{{asset "css/screen.css"}}">
 
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -36,12 +36,22 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <div class="container">
     {{{body}}}
-    <footer class="row">
-        <div class="column">
-            <p><a href="#">Back to top</a></p>
-            <p>Michael 'faide' Ko is a computer science college student interested in games development and web technologies.
-                He is currently developing a game engine in Javascript while he completes his undergraduate degree.</p>
+    <hr/>
+    <footer>
+        <div class="row">
+            <div class="column">
+                <p>
+                    Michael 'faide' Ko studies computer science at UBC in Vancouver.  He is interested in games development and
+                    web technologies, and is currently developing a game engine in Javascript while he completes his undergraduate degree.
+                </p>
+            </div>
         </div>
+        <nav class="row">
+            <span class="two columns">&copy; faide 2014</span>
+            <a href="#" class="one columns">Github</a>
+            <a href="#" class="one columns">Twitter</a>
+            <a href="#" class="one columns">Email</a>
+        </nav>
     </footer>
 </div>
 
